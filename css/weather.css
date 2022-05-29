@@ -278,11 +278,51 @@ a {
 }
 @media screen and (max-width: 400px) {
   .container {
-    margin-left: 5px;
+    margin-left: 0px;
   }
 
   .weather-flex {
     margin-top: 5px;
     display: block;
+  }
+
+  .weather__text {
+    font-size: 71px;
+    line-height: 81px;
+    margin-bottom: 50px;
+  }
+
+  .weather__widget {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .weather__widget-block {
+    position: static;
+    height: 296px;
+    min-width: 273px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .widget-block__city {
+    font-size: 23px;
+  }
+
+  .widget-block__temperature {
+    font-size: 38px;
+  }
+
+  .widget-block__status p {
+    font-size: 19px;
+    padding-left: 5px;
+    padding-right: 50px;
+  }
+
+  .weather__widget-img img {
+    position: absolute;
+    right: 0;
+    top: 254px;
+    height: 355px;
   }
 }
