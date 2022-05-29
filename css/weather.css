@@ -289,7 +289,7 @@ a {
   .weather__text {
     font-size: 71px;
     line-height: 81px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     margin-left: 55px;
   }
 
@@ -301,7 +301,7 @@ a {
   .weather__widget-block {
     position: static;
     height: 332px;
-    min-width: 384px;
+    min-width: 366px;
     padding-left: 5px;
     padding-right: 5px;
   }
@@ -323,7 +323,7 @@ a {
   .weather__widget-img img {
     position: absolute;
     right: -12px;
-    top: 297px;
+    top: 271px;
     height: 403px;
   }
 }
