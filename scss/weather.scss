@@ -227,7 +227,7 @@ a{
     margin-top: 130px;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
 	.container {
     margin-left: 0px;
 	}
@@ -241,6 +241,7 @@ a{
     font-size: 71px;
     line-height: 81px;
     margin-bottom: 50px;
+    margin-left: 55px;
 	}
 
 	.weather__widget {
@@ -249,8 +250,8 @@ a{
 
 	.weather__widget-block {
     position: static;
-    height: 296px;
-    min-width: 273px;
+    height: 332px;
+    min-width: 384px;
     padding-left: 5px;
     padding-right: 5px;
 	}
@@ -271,8 +272,8 @@ a{
 
 	.weather__widget-img img{
 	position: absolute;
-	right: 0;
-    top: 254px;
-    height: 355px;
+	right: -12px;
+    top: 297px;
+    height: 403px;
 	}
 }
