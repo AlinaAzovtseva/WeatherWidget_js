@@ -1,9 +1,10 @@
-const link = "http://api.weatherstack.com/current?access_key=bef8acaae91d78603d3d4e42e4a11041"
+const link = "http://api.weatherstack.com/current?access_key=db2894b25e2611f1e7ffb057f5e18a11"
 const weatherBlock = document.querySelector('.weather__widget')
 const body = document.querySelector('body')
 const textInput = document.getElementById("text-input");
 const form = document.getElementById("form");
 const popup = document.getElementById("popup");
+const close = document.getElementById("close");
 
 
 let store = {
@@ -18,7 +19,7 @@ let store = {
 const fetchData = async () => {
 
 	const query = localStorage.getItem('query') || store.city;
-	const result = await fetch(`${link}&query=${store.city}`);
+	const result = await fetch(`${link}&query=${query}`);
 	const data = await result.json(); console.log(data)
 
  
@@ -50,14 +51,16 @@ const getImage = (weatherDescriptions) => {
 	if (weatherDescriptions == 'Mist') return 'mist.png';
 	if (weatherDescriptions == 'Patchy light drizzle') return 'light_rain.png';
 	if (weatherDescriptions == 'Rain With Thunderstorm') return 'thunderstorm.png';
-	
+	if (weatherDescriptions == 'Light drizzle') return 'light_rain.png';
+	if (weatherDescriptions == 'Patchy light rain') return 'light_rain.png';
 }
 
 const markup = () => {
 	const { city, weatherDescriptions, temperature, region, isDay, weatherIcons} = store;
-	const bgClass = isDay === 'no'? body.classList.add('is-day') : "";
+	isDay === 'no'? body.classList.add('is-day') : "";
+	isDay === 'yes'? body.classList.remove('is-day') : "";
 
-	return ` <div class="weather__widget-block ${bgClass}">
+	return ` <div class="weather__widget-block">
 				<div class="widget-block__city">${city}, <img src="img/down.png"> ${region}</div> 
 				<div class="widget-block__temperature">${temperature}°C</div>
 				<div class="widget-block__status">
@@ -79,6 +82,7 @@ const renderComponent = () => {
 
   const city = document.querySelector('.widget-block__city');
   city.addEventListener("click", togglePopupClass);
+  close.addEventListener("click", togglePopupClass);
 };
 
 const handleInput = (e) => {
