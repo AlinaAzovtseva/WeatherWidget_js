@@ -17,7 +17,7 @@ let store = {
 
 const fetchData = async () => {
 
-	//const query = localStorage.getItem('query') || store.city;
+	const query = localStorage.getItem('query') || store.city;
 	const result = await fetch(`${link}&query=${store.city}`);
 	const data = await result.json(); console.log(data)
 
