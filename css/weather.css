@@ -236,23 +236,23 @@ a {
 }
 
 .form-input::-webkit-input-placeholder {
-  color: #bbbbbb;
+  color: rgb(187, 187, 187);
 }
 
 .form-input::-moz-placeholder {
-  color: #bbbbbb;
+  color: rgb(187, 187, 187);
 }
 
 .form-input:-ms-input-placeholder {
-  color: #bbbbbb;
+  color: rgb(187, 187, 187);
 }
 
 .form-input::-ms-input-placeholder {
-  color: #bbbbbb;
+  color: rgb(187, 187, 187);
 }
 
 .form-input::placeholder {
-  color: #bbbbbb;
+  color: rgb(187, 187, 187);
 }
 
 @media screen and (max-width: 1921px) {
@@ -274,5 +274,15 @@ a {
 
   .weather-flex {
     margin-top: 130px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    margin-left: 5px;
+  }
+
+  .weather-flex {
+    margin-top: 5px;
+    display: block;
   }
 }
