@@ -1,4 +1,4 @@
-const link = "http://api.weatherstack.com/current?access_key=db2894b25e2611f1e7ffb057f5e18a11"
+const link = "https://api.weatherstack.com/current?access_key=db2894b25e2611f1e7ffb057f5e18a11"
 const weatherBlock = document.querySelector('.weather__widget')
 const body = document.querySelector('body')
 const textInput = document.getElementById("text-input");
